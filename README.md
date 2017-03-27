@@ -1,2 +1,2 @@
-# github-emoji-flair
-Generate your Github emoji flair NOW! 😍😍😍
+# github-flair
+Generate your Github flair NOW! 😍😍😍
