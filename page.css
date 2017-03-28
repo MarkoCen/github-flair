@@ -1,0 +1,33 @@
+body{
+    margin: 4em 0;
+}
+.logo{
+    width: 30%;
+}
+
+.flair{
+    width: 300px;
+    height: 100px;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.avatar{
+    text-align: center;
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    margin-top: 7px;
+}
+
+.avatar img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.info{
+    width: 200px;
+    display: inline-block;
+}
