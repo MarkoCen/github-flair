@@ -6,7 +6,7 @@ Generate your unique GitHub flair, inspired by [Stack Overflow Flair](http://sta
 ![](https://cdn.rawgit.com/MarkoCen/github-flair/ab4f277c/sample.PNG)
 
 ### Road Map
- 1. Rainbow Avatar
+ 1. ~~Rainbow Avatar~~
  2. Customized Theme
  3. Repo Flair
  4. Organization Flair
