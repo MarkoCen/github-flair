@@ -17,6 +17,7 @@
         },
         avatar: {
             'text-align': 'center',
+            position: 'relative',
             width: '75px',
             height: '75px',
             'margin-left': '5px'
@@ -69,6 +70,7 @@
         },
         avatar: {
             'text-align': 'center',
+            position: 'relative',
             width: '75px',
             height: '75px',
             'margin-left': '5px'
@@ -121,6 +123,7 @@
         },
         avatar: {
             'text-align': 'center',
+            position: 'relative',
             width: '75px',
             height: '75px',
             'margin-left': '5px'
@@ -173,6 +176,7 @@
         },
         avatar: {
             'text-align': 'center',
+            position: 'relative',
             width: '75px',
             height: '75px',
             'margin-left': '5px'
@@ -225,6 +229,7 @@
         },
         avatar: {
             'text-align': 'center',
+            position: 'relative',
             width: '75px',
             height: '75px',
             'margin-left': '5px'
@@ -277,6 +282,7 @@
         },
         avatar: {
             'text-align': 'center',
+            position: 'relative',
             width: '75px',
             height: '75px',
             'margin-left': '5px'
@@ -329,6 +335,7 @@
         },
         avatar: {
             'text-align': 'center',
+            position: 'relative',
             width: '75px',
             height: '75px',
             'margin-left': '5px'

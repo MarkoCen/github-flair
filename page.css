@@ -28,3 +28,27 @@ body{
     bottom: 10px;
     right: 20px;
 }
+
+.avatar .border{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-width: 3px;
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-left-style: dotted;
+    border-right-style: dotted;
+    border-color: hsl(265, 90%, 50%);
+    animation: rainbow 5s infinite alternate, spin 10s linear infinite;
+    border-radius: 50%;
+}
+@keyframes rainbow {
+    0% {border-color: hsl(265, 90%, 50%);}
+    100% {border-color: hsl(360, 90%, 50%);}
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

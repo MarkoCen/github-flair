@@ -6,6 +6,7 @@
     var FOLLOWERS_ICON = '<svg height="12" viewBox="0 0 16 16" width="12"><path fill-rule="evenodd" d="M16 12.999c0 .439-.45 1-1 1H7.995c-.539 0-.994-.447-.995-.999H1c-.54 0-1-.561-1-1 0-2.634 3-4 3-4s.229-.409 0-1c-.841-.621-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.442.58 2.5 3c.058 2.41-.159 2.379-1 3-.229.59 0 1 0 1s1.549.711 2.42 2.088C9.196 9.369 10 8.999 10 8.999s.229-.409 0-1c-.841-.62-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.437.581 2.495 3c.059 2.41-.158 2.38-1 3-.229.59 0 1 0 1s3.005 1.366 3.005 4"></path></svg>';
     var REPO_ICON = '<svg height="12" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>';
     var GIST_ICON = '<svg height="12" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.5 5L10 7.5 7.5 10l-.75-.75L8.5 7.5 6.75 5.75 7.5 5zm-3 0L2 7.5 4.5 10l.75-.75L3.5 7.5l1.75-1.75L4.5 5zM0 13V2c0-.55.45-1 1-1h10c.55 0 1 .45 1 1v11c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1zm1 0h10V2H1v11z"></path></svg>';
+    var RAINBOW_STYLE = '.github-flair-rainbow-avatar{position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin:-3px;border-width: 3px;border-top-style: dotted;border-bottom-style: dotted;border-left-style: dotted;border-right-style: dotted;border-color: hsl(250, 90%, 50%);animation: rainbow 5s infinite alternate, spin 10s linear infinite;border-radius: 50%;}@keyframes rainbow {0% {border-color: hsl(250, 90%, 50%);}100% {border-color: hsl(360, 90%, 50%);}}@keyframes spin {0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}';
     var profile = {};
 
     $('.generate').click(start);
@@ -65,6 +66,7 @@
 
         div.appendChild(divFlair);
         div.appendChild(divText);
+
         return div;
     }
 
@@ -133,6 +135,10 @@
         div.appendChild(avatarNode);
         div.appendChild(infoNode);
 
+        if(isDisplayRainbow()){
+            div.appendChild(rainbowStyleTemplate());
+        }
+
         return div;
     }
 
@@ -157,8 +163,25 @@
         a.appendChild(img);
         div.className = 'avatar';
         div.style = styleString(theme['avatar']);
+
+        if(isDisplayRainbow()){
+            var divBorder = document.createElement('DIV');
+            divBorder.className = 'github-flair-rainbow-avatar';
+            div.appendChild(divBorder);
+        }
         div.appendChild(a);
         return div;
+    }
+
+    function rainbowStyleTemplate(){
+        var style = document.createElement('STYLE');
+        style.type = 'text/css';
+        if (style.styleSheet){
+            style.styleSheet.cssText = RAINBOW_STYLE;
+        } else {
+            style.appendChild(document.createTextNode(RAINBOW_STYLE));
+        }
+        return style;
     }
 
     function infoTemplate(theme){
@@ -173,8 +196,8 @@
 
         div.appendChild(nameNode);
         div.appendChild(metaNode);
-        if(locNode) div.appendChild(locNode);
-        if(blogNode) div.appendChild(blogNode);
+        if(locNode && isDisplayLocation()) div.appendChild(locNode);
+        if(blogNode && isDisplayWebsite()) div.appendChild(blogNode);
 
         return div;
     }
@@ -195,23 +218,23 @@
     function metaTemplate(followerCount, repoCount, gistCount, theme){
         var div = document.createElement('DIV');
         div.className = 'meta';
-        var starSpan = document.createElement('SPAN');
+        var followerSpan = document.createElement('SPAN');
         var repoSpan = document.createElement('SPAN');
         var gistSpan = document.createElement('SPAN');
 
-        starSpan.innerHTML = FOLLOWERS_ICON + ' ' + followerCount + '&nbsp;&nbsp;';
+        followerSpan.innerHTML = FOLLOWERS_ICON + ' ' + followerCount + '&nbsp;&nbsp;';
         repoSpan.innerHTML = REPO_ICON + ' ' + repoCount + '&nbsp;&nbsp;';
         gistSpan.innerHTML = GIST_ICON + ' ' + gistCount;
 
-        starSpan.firstChild.style = styleString(theme['svgIcon']);
+        followerSpan.firstChild.style = styleString(theme['svgIcon']);
         repoSpan.firstChild.style = styleString(theme['svgIcon']);
         gistSpan.firstChild.style = styleString(theme['svgIcon']);
 
-        starSpan.title = 'Followers';
+        followerSpan.title = 'Followers';
         repoSpan.title = 'Total Public Repositories';
         gistSpan.title = 'Total Public Gists';
 
-        div.appendChild(starSpan);
+        if(isDisplayFollowers()) div.appendChild(followerSpan);
         div.appendChild(repoSpan);
         div.appendChild(gistSpan);
 
@@ -242,6 +265,22 @@
         span.innerHTML = '&nbsp;' + loc;
         div.appendChild(span);
         return div;
+    }
+
+    function isDisplayRainbow() {
+        return $('.display-rainbow')[0].checked;
+    }
+
+    function isDisplayWebsite() {
+        return $('.display-website')[0].checked;
+    }
+
+    function isDisplayFollowers() {
+        return $('.display-followers')[0].checked;
+    }
+
+    function isDisplayLocation() {
+        return $('.display-location')[0].checked;
     }
 
 })(window.jQuery, window.flairThemes);
