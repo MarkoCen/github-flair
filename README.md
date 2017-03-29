@@ -1,5 +1,5 @@
 # github-flair
-Generate your unique GitHub flair, inspired by [Stack Overflow Flair](http://stackoverflow.com/users/flair)! 
+Generate your unique GitHub flair, inspired by [Stack Overflow Flair](http://stackoverflow.com/users/flair). 
 
 ### [GENERATE NOW!](https://markocen.github.io/github-flair/) 
 
