@@ -1,2 +1,17 @@
 # github-flair
-Generate your Github flair just like [Stack Overflow did](http://stackoverflow.com/users/flair)!
+Generate your unique GitHub flair, inspired by [Stack Overflow Flair](http://stackoverflow.com/users/flair)! 
+
+### [GENERATE NOW!](https://markocen.github.io/github-flair/) 
+
+![](https://cdn.rawgit.com/MarkoCen/github-flair/ab4f277c/sample.PNG)
+
+### Road Map
+ 1. Rainbow Avatar
+ 2. Customized Theme
+ 
+### Contribution
+If you are not satisfied with themes I created, a theme PR is always welcomed. You could create new theme by add theme options in `flairStyles.js` file.
+
+
+
+
