@@ -21,6 +21,7 @@
         getUser(username).then(function(data){
             getProfile(data);
             getRepos(username).then(function(data){
+                resetThemes(themes);
                 getStars(data);
                 var flairs = getFlairs();
                 var flairContainer = $('.flair-container');
@@ -44,6 +45,14 @@
     function getRepos(username){
         var url = API_BASE_URL + 'users/' + username + '/repos';
         return $.get(url);
+    }
+
+    function resetThemes(themes){
+        var isRound = isRoundAvatar();
+        var themeKeys = Object.keys(themes);
+        themeKeys.forEach(function (themeKey) {
+            themes[themeKey]['avatarImg']['border-radius'] = isRound ? '50%':'0';
+        })
     }
 
     function getFlairSection(flairNode){
@@ -281,6 +290,10 @@
 
     function isDisplayLocation() {
         return $('.display-location')[0].checked;
+    }
+
+    function isRoundAvatar(){
+        return $('.round-avatar')[0].checked;
     }
 
 })(window.jQuery, window.flairThemes);
