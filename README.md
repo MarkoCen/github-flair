@@ -3,7 +3,7 @@ Generate your unique GitHub flair, inspired by [Stack Overflow Flair](http://sta
 
 ### [GENERATE NOW!](https://markocen.github.io/github-flair/) 
 
-![](https://cdn.rawgit.com/MarkoCen/github-flair/ab4f277c/sample.PNG)
+![](https://github.com/MarkoCen/github-flair/blob/master/sample.PNG)
 
 ### Road Map
  - [x] Rainbow Avatar
