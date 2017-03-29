@@ -223,7 +223,7 @@
         var div = document.createElement('DIV');
         var a = document.createElement('A');
         div.className = 'blog';
-        a.href = url;
+        a.href = /^https?:\/\//.test(url) ? url : 'http://' + url;
         a.target = "_blank";
         a.innerHTML = 'Blog / Website';
         a.style = styleString(theme['textLink']);
