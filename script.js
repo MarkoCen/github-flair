@@ -173,8 +173,8 @@
 
         div.appendChild(nameNode);
         div.appendChild(metaNode);
-        div.appendChild(locNode);
-        div.appendChild(blogNode);
+        if(locNode) div.appendChild(locNode);
+        if(blogNode) div.appendChild(blogNode);
 
         return div;
     }
