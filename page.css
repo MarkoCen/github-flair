@@ -9,8 +9,8 @@ body{
 }
 .flair-container > div{
     padding: 10px;
-    height: 180px;
-    display: flex;
+    /*height: 180px;*/
+    /*display: flex;*/
     align-items: center;
     margin-bottom: 75px;
 }
@@ -51,4 +51,47 @@ body{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 550px) {
+    .text-wrap > textarea{
+        width: 290px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #user-input > div{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .flair-container .text-wrap {
+        text-align: center;
+        margin: 10px auto 40px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .text-wrap > textarea{
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .text-wrap > textarea{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .author{
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+        background-color: #ffffff;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: right;
+        border-top: 1px solid #eee;
+    }
 }
