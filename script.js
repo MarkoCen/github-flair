@@ -61,9 +61,9 @@
         var divText = document.createElement('DIV');
         var textArea = document.createElement('TEXTAREA');
         div.className = "col-xs-12";
-        divFlair.className = "col-xs-6 flair-wrap";
+        divFlair.className = "col-sm-6 flair-wrap";
         divFlair.appendChild(flairNode);
-        divText.className = "col-xs-6 text-wrap";
+        divText.className = "col-sm-6 text-wrap";
 
         textArea.value = $(flairNode).prop('outerHTML');
         textArea.readOnly = 'readOnly';
