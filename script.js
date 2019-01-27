@@ -87,6 +87,7 @@
         return flairs;
     }
 
+    //example data https://api.github.com/users/umanusorn?
     function getProfile(userData){
         profile.avatar = userData['avatar_url'];
         profile.link = userData['html_url'];
@@ -94,7 +95,7 @@
         profile.location = userData['location'];
         profile.blog = userData['blog'];
         profile.company = userData['company'];
-        profile.bioinfo = userData['user-profile-bio'];
+        profile.bioinfo = userData['bio'];
 
         profile.followers = truncateNum(userData['followers']);
         profile.followerUrl = userData['followers_url'];
