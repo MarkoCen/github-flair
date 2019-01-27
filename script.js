@@ -197,8 +197,10 @@
         var div = document.createElement('DIV');
         div.className = 'info';
         div.style = styleString(theme['info']);
+        
 
         var nameNode = nameTemplate(profile.username, profile.link, theme);
+        var nameNode = bioInfoTemplate(profile.bioinfo, profile.link, theme);
         var metaNode = metaTemplate(profile.followers, profile.repos, profile.gists, theme);
         var locNode = locationTemplate(profile.location, theme);
         var blogNode = blogTemplate(profile.blog, theme);
@@ -211,6 +213,17 @@
         return div;
     }
 
+     function bioInfoTemplate(info, theme){
+        if(!info) return;
+        var div = document.createElement('DIV');
+        var span = document.createElement('SPAN');
+        div.className = 'user-profile-bio';
+        span.innerHTML = '&nbsp;' + info;
+        div.appendChild(span);
+        return div;
+        
+    }
+    
     function nameTemplate(name, link, theme) {
         var div = document.createElement('DIV');
         var a = document.createElement('A');
@@ -274,8 +287,9 @@
         span.innerHTML = '&nbsp;' + loc;
         div.appendChild(span);
         return div;
+        
     }
-
+  
     function isDisplayRainbow() {
         return $('.display-rainbow')[0].checked;
     }
