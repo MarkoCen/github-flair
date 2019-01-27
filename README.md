@@ -1,7 +1,7 @@
 # github-flair
 Generate your unique GitHub flair, inspired by [Stack Overflow Flair](http://stackoverflow.com/users/flair). 
 
-### [GENERATE NOW!](https://github.com/umanusorn/github-flair/) 
+### [GENERATE NOW!](https://umanusorn.github.io/umanusorn/github-flair/) 
 
 ![](https://github.com/umanusorn/github-flair/blob/master/sample.PNG)
 
