@@ -205,8 +205,11 @@
 
         div.appendChild(nameNode);
         div.appendChild(metaNode);
-        if(locNode && isDisplayLocation()) div.appendChild(locNode);
-        if(blogNode && isDisplayWebsite()) div.appendChild(blogNode);
+        
+        if(locNode && isDisplayLocation()) 
+            div.appendChild(locNode);
+        if(blogNode && isDisplayWebsite()) 
+            div.appendChild(blogNode);
         return div;
     }
 
@@ -216,7 +219,8 @@
         var span = document.createElement('SPAN');
         div.className = 'user-profile-bio';
         span.innerHTML = '&nbsp;' + info;
-        div.appendChild(span);
+        if(isDisplayBioInfo())
+            div.appendChild(span);
         return div;   
     }
     
@@ -302,6 +306,10 @@
 
     function isRoundAvatar(){
         return $('.round-avatar')[0].checked;
+    }
+    
+    function isDisplayBioInfo(){
+        return $('.display-bio-info')[0].checked;
     }
 
 })(window.jQuery, window.flairThemes);
