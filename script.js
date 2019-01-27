@@ -72,10 +72,9 @@
             this.select();
         };
         divText.appendChild(textArea);
-
+        
         div.appendChild(divFlair);
         div.appendChild(divText);
-
         return div;
     }
 
@@ -88,24 +87,25 @@
         return flairs;
     }
 
+    //example data https://api.github.com/users/umanusorn?
     function getProfile(userData){
-        profile.avatar = userData['avatar_url'];
-        profile.link = userData['html_url'];
-        profile.username = userData['login'];
-        profile.location = userData['location'];
-        profile.blog = userData['blog'];
-        profile.company = userData['company'];
+        profile.avatar = userData['avatar_url']|| "";
+        profile.link = userData['html_url']|| "";
+        profile.username = userData['login']|| "";
+        profile.location = userData['location']|| "";
+        profile.blog = userData['blog']|| "";
+        profile.company = userData['company']|| "";
+        profile.bioinfo = userData['bio']|| "";
 
-        profile.followers = truncateNum(userData['followers']);
-        profile.followerUrl = userData['followers_url'];
-        profile.followings = truncateNum(userData['followings']);
-        profile.followingUrl = userData['following_url'];
+        profile.followers = truncateNum(userData['followers']|| "");
+        profile.followerUrl = userData['followers_url']|| "";
+        profile.followings = truncateNum(userData['followings']|| "");
+        profile.followingUrl = userData['following_url']|| "";
 
-        profile.gists = truncateNum(userData['public_gists']);
-        profile.gistUrl = userData['gists_url'];
-        profile.repos = truncateNum(userData['public_repos']);
-        profile.repoUrl = userData['repos_url'];
-
+        profile.gists = truncateNum(userData['public_gists']|| "");
+        profile.gistUrl = userData['gists_url']|| "";
+        profile.repos = truncateNum(userData['public_repos']|| "");
+        profile.repoUrl = userData['repos_url']|| "";
     }
 
     function getStars(repoData) {
@@ -147,7 +147,6 @@
         if(isDisplayRainbow()){
             div.appendChild(rainbowStyleTemplate());
         }
-
         return div;
     }
 
@@ -199,18 +198,31 @@
         div.style = styleString(theme['info']);
 
         var nameNode = nameTemplate(profile.username, profile.link, theme);
+        var nameNode = bioInfoTemplate(profile.bioinfo, profile.link, theme);
         var metaNode = metaTemplate(profile.followers, profile.repos, profile.gists, theme);
         var locNode = locationTemplate(profile.location, theme);
         var blogNode = blogTemplate(profile.blog, theme);
 
         div.appendChild(nameNode);
         div.appendChild(metaNode);
-        if(locNode && isDisplayLocation()) div.appendChild(locNode);
-        if(blogNode && isDisplayWebsite()) div.appendChild(blogNode);
-
+        
+        if(locNode && isDisplayLocation()) 
+            div.appendChild(locNode);
+        if(blogNode && isDisplayWebsite()) 
+            div.appendChild(blogNode);
         return div;
     }
 
+     function bioInfoTemplate(info, theme){
+        var div = document.createElement('DIV');
+        var span = document.createElement('SPAN');
+        div.className = 'user-profile-bio';
+        span.innerHTML = '&nbsp;' + (info|| "");
+        if(isDisplayBioInfo())
+            div.appendChild(span);
+        return div;   
+    }
+    
     function nameTemplate(name, link, theme) {
         var div = document.createElement('DIV');
         var a = document.createElement('A');
@@ -246,7 +258,6 @@
         if(isDisplayFollowers()) div.appendChild(followerSpan);
         div.appendChild(repoSpan);
         div.appendChild(gistSpan);
-
         return div;
     }
     
@@ -275,7 +286,7 @@
         div.appendChild(span);
         return div;
     }
-
+  
     function isDisplayRainbow() {
         return $('.display-rainbow')[0].checked;
     }
@@ -294,6 +305,10 @@
 
     function isRoundAvatar(){
         return $('.round-avatar')[0].checked;
+    }
+    
+    function isDisplayBioInfo(){
+        return $('.display-bio-info')[0].checked;
     }
 
 })(window.jQuery, window.flairThemes);
