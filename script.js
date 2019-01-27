@@ -214,11 +214,10 @@
     }
 
      function bioInfoTemplate(info, theme){
-        if(!info) return;
         var div = document.createElement('DIV');
         var span = document.createElement('SPAN');
         div.className = 'user-profile-bio';
-        span.innerHTML = '&nbsp;' + info;
+        span.innerHTML = '&nbsp;' + (info|| "");
         if(isDisplayBioInfo())
             div.appendChild(span);
         return div;   
