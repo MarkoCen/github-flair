@@ -89,23 +89,23 @@
 
     //example data https://api.github.com/users/umanusorn?
     function getProfile(userData){
-        profile.avatar = userData['avatar_url'];
-        profile.link = userData['html_url'];
-        profile.username = userData['login'];
-        profile.location = userData['location'];
-        profile.blog = userData['blog'];
-        profile.company = userData['company'];
-        profile.bioinfo = userData['bio'];
+        profile.avatar = userData['avatar_url']|| "";
+        profile.link = userData['html_url']|| "";
+        profile.username = userData['login']|| "";
+        profile.location = userData['location']|| "";
+        profile.blog = userData['blog']|| "";
+        profile.company = userData['company']|| "";
+        profile.bioinfo = userData['bio']|| "";
 
-        profile.followers = truncateNum(userData['followers']);
-        profile.followerUrl = userData['followers_url'];
-        profile.followings = truncateNum(userData['followings']);
-        profile.followingUrl = userData['following_url'];
+        profile.followers = truncateNum(userData['followers']|| "");
+        profile.followerUrl = userData['followers_url']|| "";
+        profile.followings = truncateNum(userData['followings']|| "");
+        profile.followingUrl = userData['following_url']|| "";
 
-        profile.gists = truncateNum(userData['public_gists']);
-        profile.gistUrl = userData['gists_url'];
-        profile.repos = truncateNum(userData['public_repos']);
-        profile.repoUrl = userData['repos_url'];
+        profile.gists = truncateNum(userData['public_gists']|| "");
+        profile.gistUrl = userData['gists_url']|| "";
+        profile.repos = truncateNum(userData['public_repos']|| "");
+        profile.repoUrl = userData['repos_url']|| "";
     }
 
     function getStars(repoData) {
