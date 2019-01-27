@@ -5,7 +5,7 @@
 
 Generate your unique GitHub flair, inspired by [Stack Overflow Flair](http://stackoverflow.com/users/flair). 
 
-[Live example](https://umanusorn.github.io/github-flair/blob/master/Github-Flair-Example.html)
+[Live example](https://htmlpreview.github.com/?https://github.com/umanusorn/github-flair/blob/master/Github-Flair-Example.html)
 
 ![](https://github.com/umanusorn/github-flair/blob/master/Github-Flair_example_jan2019.png)
 
