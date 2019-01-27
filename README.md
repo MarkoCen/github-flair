@@ -1,4 +1,4 @@
-# github-flair
+# Github-Flair
 
 
 ### [GENERATE NOW!](https://umanusorn.github.io/github-flair/) 
@@ -9,9 +9,10 @@ Generate your unique GitHub flair, inspired by [Stack Overflow Flair](http://sta
 
 ### Road Map
  - [x] Rainbow Avatar
+ - [x] Organization Flair
  - [ ] Customized Theme
  - [ ] Repo Flair
- - [x] Organization Flair
+
  
 ### Contribution
 If you are not satisfied with themes I created, a theme PR is always welcomed. 
