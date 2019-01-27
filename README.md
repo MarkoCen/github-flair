@@ -1,9 +1,9 @@
 # github-flair
 Generate your unique GitHub flair, inspired by [Stack Overflow Flair](http://stackoverflow.com/users/flair). 
 
-### [GENERATE NOW!](https://markocen.github.io/github-flair/) 
+### [GENERATE NOW!](https://github.com/umanusorn/github-flair) 
 
-![](https://github.com/MarkoCen/github-flair/blob/master/sample.PNG)
+![](https://github.com/umanusorn/github-flair/blob/master/sample.PNG)
 
 ### Road Map
  - [x] Rainbow Avatar
