@@ -94,6 +94,7 @@
         profile.location = userData['location'];
         profile.blog = userData['blog'];
         profile.company = userData['company'];
+        profile.bioinfo = userData['user-profile-bio'];
 
         profile.followers = truncateNum(userData['followers']);
         profile.followerUrl = userData['followers_url'];
