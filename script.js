@@ -72,10 +72,9 @@
             this.select();
         };
         divText.appendChild(textArea);
-
+        
         div.appendChild(divFlair);
         div.appendChild(divText);
-
         return div;
     }
 
@@ -105,7 +104,6 @@
         profile.gistUrl = userData['gists_url'];
         profile.repos = truncateNum(userData['public_repos']);
         profile.repoUrl = userData['repos_url'];
-
     }
 
     function getStars(repoData) {
@@ -147,7 +145,6 @@
         if(isDisplayRainbow()){
             div.appendChild(rainbowStyleTemplate());
         }
-
         return div;
     }
 
@@ -197,7 +194,6 @@
         var div = document.createElement('DIV');
         div.className = 'info';
         div.style = styleString(theme['info']);
-        
 
         var nameNode = nameTemplate(profile.username, profile.link, theme);
         var nameNode = bioInfoTemplate(profile.bioinfo, profile.link, theme);
@@ -209,7 +205,6 @@
         div.appendChild(metaNode);
         if(locNode && isDisplayLocation()) div.appendChild(locNode);
         if(blogNode && isDisplayWebsite()) div.appendChild(blogNode);
-
         return div;
     }
 
@@ -220,8 +215,7 @@
         div.className = 'user-profile-bio';
         span.innerHTML = '&nbsp;' + info;
         div.appendChild(span);
-        return div;
-        
+        return div;   
     }
     
     function nameTemplate(name, link, theme) {
@@ -259,7 +253,6 @@
         if(isDisplayFollowers()) div.appendChild(followerSpan);
         div.appendChild(repoSpan);
         div.appendChild(gistSpan);
-
         return div;
     }
     
@@ -287,7 +280,6 @@
         span.innerHTML = '&nbsp;' + loc;
         div.appendChild(span);
         return div;
-        
     }
   
     function isDisplayRainbow() {
