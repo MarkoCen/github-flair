@@ -26,4 +26,5 @@ Feel free to sugesst or contribute on any part [just ForkMe](https://github.com/
 
 
 
-[![HitCount](http://hits.dwyl.com/{username}/{project-name}.svg)](http://hits.dwyl.com/umanusorn/Github-Flair)
+[![HitCount](http://hits.dwyl.com/umanusorn/Github-Flair.svg)](http://hits.dwyl.com/umanusorn/Github-Flair)
+![](https://img.shields.io/github/license/umanusorn/Github-Flair.svg)
