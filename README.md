@@ -5,6 +5,7 @@
 ### [Live example](https://htmlpreview.github.com/?https://github.com/umanusorn/github-flair/blob/master/Github-Flair-Example.html)
 
 Generate your unique GitHub flair, inspired by [Stack Overflow Flair](http://stackoverflow.com/users/flair). 
+GitHub corner logo inspired by [GitHub Corners](https://github.com/tholman/github-corners)
 
 ![](https://github.com/umanusorn/github-flair/blob/master/Github-Flair_example_jan2019.png)
 
