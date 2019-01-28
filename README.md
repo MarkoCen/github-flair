@@ -16,6 +16,8 @@ GitHub corner logo inspired by [GitHub Corners](https://github.com/tholman/githu
  - [ ] Repo Flair
  
 ### Contribution
+## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+
 If you are not satisfied with themes I created, a theme PR is always welcomed. 
 You could create new theme by add theme options in `flairStyles.js` file.
 
