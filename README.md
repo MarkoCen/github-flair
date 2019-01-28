@@ -26,3 +26,4 @@ Feel free to sugesst or contribute on any part [just ForkMe](https://github.com/
 
 
 
+[![HitCount](http://hits.dwyl.com/{username}/{project-name}.svg)](http://hits.dwyl.com/umanusorn/Github-Flair)
