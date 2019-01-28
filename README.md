@@ -1,6 +1,6 @@
 # Github-Flair
 
-### [GENERATE NOW!](https://umanusorn.github.io/github-flair/) 
+### [GENERATE NOW!](https://githubflair.anusorn.app/) 
 
 ### [Live example](https://htmlpreview.github.com/?https://github.com/umanusorn/github-flair/blob/master/Github-Flair-Example.html)
 
