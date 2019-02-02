@@ -4,6 +4,8 @@
 
 ### [Live example](https://htmlpreview.github.com/?https://github.com/umanusorn/github-flair/blob/master/Github-Flair-Example.html)
 
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/umanusorn/Github-Flair/issues)
+
 Generate your unique GitHub flair, inspired by [Stack Overflow Flair](http://stackoverflow.com/users/flair). 
 GitHub corner logo inspired by [GitHub Corners](https://github.com/tholman/github-corners)
 
@@ -15,8 +17,7 @@ GitHub corner logo inspired by [GitHub Corners](https://github.com/tholman/githu
  - [ ] Customized Theme
  - [ ] Repo Flair
  
-### Contribution
-## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+## Contributing 
 
 If you are not satisfied with themes I created, a theme PR is always welcomed. 
 You could create new theme by add theme options in `flairStyles.js` file.
