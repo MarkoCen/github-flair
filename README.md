@@ -11,13 +11,14 @@ GitHub corner logo inspired by [GitHub Corners](https://github.com/tholman/githu
 
 ![](https://github.com/umanusorn/github-flair/blob/master/Github-Flair_example_jan2019.png)
 
+
+
 ### Road Map
- - [x] Rainbow Avatar
- - [x] Organization Flair
- - [ ] Customized Theme
- - [ ] Repo Flair
+Please see in issues
  
 ## Contributing 
+
+Please create new branch for your commit for easy code review and revert if it broken
 
 If you are not satisfied with themes I created, a theme PR is always welcomed. 
 You could create new theme by add theme options in `flairStyles.js` file.
