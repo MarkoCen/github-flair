@@ -99,13 +99,14 @@
 
         profile.followers = truncateNum(userData['followers']|| "");
         profile.followerUrl = userData['followers_url']|| "";
-        profile.followings = truncateNum(userData['followings']|| "");
+        profile.followings = truncateNum(userData['followings']|| 0);
         profile.followingUrl = userData['following_url']|| "";
 
-        profile.gists = truncateNum(userData['public_gists']|| "");
+        profile.gists = truncateNum(userData['public_gists']|| 0);
         profile.gistUrl = userData['gists_url']|| "";
-        profile.repos = truncateNum(userData['public_repos']|| "");
+        profile.repos = truncateNum(userData['public_repos']|| 0);
         profile.repoUrl = userData['repos_url']|| "";
+        console.log(profile);
     }
 
     function getStars(repoData) {
