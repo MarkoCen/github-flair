@@ -13,8 +13,8 @@ GitHub corner logo inspired by [GitHub Corners](https://github.com/tholman/githu
 
 
 
-### Road Map
-Please see in issues
+## Road Map
+[Here](https://github.com/umanusorn/Github-Flair/issues)
  
 ## Contributing 
 
