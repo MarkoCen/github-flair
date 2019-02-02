@@ -12,12 +12,16 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127068079-6"></script>
     <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-127068079-6');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-127068079-6');
     </script>
-
+    <style>
+        label{
+            font-weight: initial;
+        }
+    </style>
     
 </head>
 <body class="container">
@@ -62,15 +66,23 @@
     <br>
     <div class="row">
         <div class="col-xs-7 col-xs-offset-2">
-            <input type="checkbox" checked class="round-avatar"> Round Avatar &nbsp;&nbsp;
-            <input type="checkbox" class="display-rainbow"> Rainbow Avatar &nbsp;&nbsp;
-            </br>
-            </br>
-            <input type="checkbox" checked class="display-bio-info"> Display Info &nbsp;&nbsp;
-            <input type="checkbox" checked class="display-followers"> Display Followers &nbsp;&nbsp;
-            <input type="checkbox" checked class="display-location"> Display Location &nbsp;&nbsp;
-            <input type="checkbox" checked class="display-website"> Display Blog/Website &nbsp;&nbsp;
-
+            <label><input type="checkbox" checked class="display-round-avatar"> Round Avatar &nbsp;&nbsp;</label>
+            <label><input type="checkbox" class="display-rainbow"> Rainbow Avatar &nbsp;&nbsp;</label>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-7 col-xs-offset-2">
+            <label><input type="checkbox" checked class="display-bio-info"> Display Info &nbsp;&nbsp;</label>
+            <label><input type="checkbox" checked class="display-followers"> Display Followers &nbsp;&nbsp;</label>
+            <label><input type="checkbox" checked class="display-location"> Display Location &nbsp;&nbsp;</label>
+            <label><input type="checkbox" checked class="display-website"> Display Blog/Website &nbsp;&nbsp;</label>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-7 col-xs-offset-2">
+            <label><input type="checkbox" checked class="display-flair-corner"> Show Flair Corner &nbsp;&nbsp;</label>
         </div>
     </div>
     <br>

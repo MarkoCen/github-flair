@@ -97,7 +97,7 @@
         profile.company = userData['company']|| "";
         profile.bioinfo = userData['bio']|| "";
 
-        profile.followers = truncateNum(userData['followers']|| "");
+        profile.followers = truncateNum(userData['followers']|| 0);
         profile.followerUrl = userData['followers_url']|| "";
         profile.followings = truncateNum(userData['followings']|| 0);
         profile.followingUrl = userData['following_url']|| "";
@@ -106,7 +106,6 @@
         profile.gistUrl = userData['gists_url']|| "";
         profile.repos = truncateNum(userData['public_repos']|| 0);
         profile.repoUrl = userData['repos_url']|| "";
-        console.log(profile);
     }
 
     function getStars(repoData) {
@@ -141,7 +140,10 @@
         var avatarNode = avatarTemplate(profile.avatar, profile.link, theme);
         var infoNode = infoTemplate(theme);
 
-        div.appendChild(githubCornerNode);
+        if (isDisplayFlairCorner()) {
+            div.appendChild(githubCornerNode);
+        }
+        
         div.appendChild(avatarNode);
         div.appendChild(infoNode);
 
@@ -305,11 +307,15 @@
     }
 
     function isRoundAvatar(){
-        return $('.round-avatar')[0].checked;
+        return $('.display-round-avatar')[0].checked;
     }
     
     function isDisplayBioInfo(){
         return $('.display-bio-info')[0].checked;
+    }
+
+    function isDisplayFlairCorner(){
+        return $('.display-flair-corner')[0].checked;
     }
 
 })(window.jQuery, window.flairThemes);
